@@ -6,7 +6,7 @@ const PdfViewer = () => {
   const [pdfUrl, setPdfUrl] = useState("");
   const [numPages, setNumPages] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
+
   const [pdfDocument, setPdfDocument] = useState(null);
   const [pdfPage, setPdfPage] = useState(null);
 
@@ -45,7 +45,7 @@ const PdfViewer = () => {
           ((event.target.height - offsetY) * viewport.height) /
           event.target.height;
 
-        setCoordinates({ x: pdfX, y: pdfY });
+        // setCoordinates({ x: pdfX, y: pdfY });
 
         // Get canvas context
         const overlayCanvas = document.createElement("canvas");
